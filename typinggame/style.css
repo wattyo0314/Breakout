@@ -1,0 +1,19 @@
+#text {
+  font-size: 4em;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+}
+
+span {
+  transition: all 300ms 0ms ease;
+}
+
+.add-blue {
+  font-size: 0.5em;
+  color: skyblue;
+}
+
+.info {
+  text-align: center;
+}

@@ -20,6 +20,7 @@
   const scoreLabel = document.getElementById("score");
   const missLabel = document.getElementById("miss");
   const timerLabel = document.getElementById("timer");
+  const addBlue = document.getElementsByClassName("add-blue");
 
   function init() {
     loc = 0;
@@ -49,7 +50,7 @@
   }
 
   document.addEventListener("click", () => {
-    if (isPlaying === true) {
+    if (isPlaying) {
       return;
     }
     isPlaying = true;
@@ -64,7 +65,6 @@
         let span = document.createElement("span");
         span.textContent = value;
         text.appendChild(span);
-        console.log(value);
         return span;
       });
   }
@@ -77,7 +77,8 @@
     }
     loc++;
     createText();
-    word[loc].className = "add-blue";
+    word[loc] = addBlue;
+    // text.textContent = "_".repeat(loc) + word.substring(loc);
     score++;
     scoreLabel.textContent = score;
     if (loc === word.length) {

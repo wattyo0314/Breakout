@@ -6,12 +6,12 @@
 }
 
 span {
-  transition: all 300ms 0ms ease;
 }
 
 .add-blue {
   font-size: 0.5em;
   color: skyblue;
+  transition: all 300ms 0ms ease;
 }
 
 .info {

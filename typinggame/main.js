@@ -4,6 +4,7 @@
   function setWord() {
     word = textLists.splice(Math.floor(Math.random() * textLists.length), 1)[0];
     text.textContent = word;
+    loc = 0;
   }
   const text = document.getElementById("text");
 
@@ -75,10 +76,9 @@
       missLabel.textContent = miss;
       return;
     }
+    word.split("").innerHTML =
+      "<span style='color: red;'> + slice(0,loc + 1)}</span>";
     loc++;
-    createText();
-    word[loc] = addBlue;
-    // text.textContent = "_".repeat(loc) + word.substring(loc);
     score++;
     scoreLabel.textContent = score;
     if (loc === word.length) {
